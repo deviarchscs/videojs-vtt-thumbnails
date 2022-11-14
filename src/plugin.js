@@ -320,7 +320,7 @@ class vttThumbnailsPlugin {
 
     vttDefinitions.forEach((vttDef) => {
       if (vttDef.match(/([0-9]{2}:)?([0-9]{2}:)?[0-9]{2}(.[0-9]{3})?( ?--> ?)([0-9]{2}:)?([0-9]{2}:)?[0-9]{2}(.[0-9]{3})?[\r\n]{1}.*/gi)) {
-        const vttDefSplit = vttDef.split(/[\r\n]/i);
+        const vttDefSplit = vttDef.split(/[\r\n]/i).slice(1);
         const vttTiming = vttDefSplit[0];
         const vttTimingSplit = vttTiming.split(/ ?--> ?/i);
         const vttTimeStart = vttTimingSplit[0];
