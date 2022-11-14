@@ -318,7 +318,7 @@ var vttThumbnailsPlugin = /*#__PURE__*/function () {
     var vttDefinitions = data.split(/[\r\n][\r\n]/i);
     vttDefinitions.forEach(function (vttDef) {
       if (vttDef.match(/([0-9]{2}:)?([0-9]{2}:)?[0-9]{2}(.[0-9]{3})?( ?--> ?)([0-9]{2}:)?([0-9]{2}:)?[0-9]{2}(.[0-9]{3})?[\r\n]{1}.*/gi)) {
-        var vttDefSplit = vttDef.split(/[\r\n]/i);
+        var vttDefSplit = vttDef.split(/[\r\n]/i).slice(1);
         var vttTiming = vttDefSplit[0];
         var vttTimingSplit = vttTiming.split(/ ?--> ?/i);
         var vttTimeStart = vttTimingSplit[0];
