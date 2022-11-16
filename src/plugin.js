@@ -408,7 +408,7 @@ class vttThumbnailsPlugin {
     cssObj.height = imageProps.h + 'px';
     cssObj.top = '-'+ imageProps.h + 'px';
     cssObj.url = imageProps.image;
-
+    cssObj.position = 'absolute';
     return cssObj;
   }
 
