@@ -406,6 +406,7 @@ class vttThumbnailsPlugin {
     cssObj.background = 'url("' + imageProps.image + '") no-repeat -' + imageProps.x + 'px -' + imageProps.y + 'px';
     cssObj.width = imageProps.w + 'px';
     cssObj.height = imageProps.h + 'px';
+    cssObj.top = '-'+ imageProps.h + 'px';
     cssObj.url = imageProps.image;
 
     return cssObj;
